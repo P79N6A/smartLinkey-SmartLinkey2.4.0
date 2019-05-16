@@ -1,0 +1,196 @@
+@import '~antd/lib/style/themes/default.less';
+.main {
+  pointer-events: all;
+  height: 470px;
+  width: 320px;
+  position: absolute;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 21, 41, 0.5);
+  top:85px;
+  left:320px;
+  background: linear-gradient(#0099ff, #0066ff);
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+  .icon {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    margin-left: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    text-align: left;
+    margin-top: 24px;
+    line-height: 22px;
+
+    .register {
+      float: right;
+    }
+  }
+}
+.loginAllStyle {
+  width: 100% !important;
+  position: absolute;
+  left: 0%;
+  top: 200px;
+  :global{
+    .ant-input-affix-wrapper{
+      width: 100%!important;
+      margin-left: 0!important;
+    }
+    .ant-tabs-content{
+      width:80%!important;
+      margin: 0 10%;
+    }
+  }
+}
+@media only screen  and (max-width: 350px){
+  .loginAllStyle {
+    width: 90% !important;
+    position: absolute;
+    left: 5%;
+    top: 200px;
+    :global{
+      .ant-input-affix-wrapper{
+        width: 86%!important;
+        margin-left: 7%!important;
+      }
+    }
+  }
+}
+
+.btnBg {
+  width: 100%!important;
+  background: linear-gradient(right, #ff3366, #ff9966) !important;
+  border-radius: 50px !important;
+  height: 36px !important;
+  margin-left: 0px!important;
+  margin-top: 10px!important;
+}
+@media only screen  and (max-width: 350px){
+  .btnBg {
+    background: linear-gradient(right, #ff3366, #ff9966) !important;
+    border-radius: 50px !important;
+    height: 36px !important;
+    margin-left: 7%!important;
+    margin-top: 10px!important;
+    width: 86%!important;
+  }
+}
+:global {
+  .ant-tabs {
+    -webkit-app-region: no-drag;
+  }
+  .ant-tabs-nav-wrap {
+    margin-top: 22px !important;
+    margin-left: -16px !important;
+  }
+  .ant-input-lg {
+    height: 36px !important;
+    font-size: 14px !important;
+  }
+}
+.none {
+  display: none !important;
+}
+.loginHeader {
+  height: 40px;
+  background: #232c3d;
+  color: #fff;
+  line-height: 30px;
+  font-size: 18px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  pointer-events: all;
+}
+.dragHeader{
+  -webkit-app-region: drag;
+  margin: 5px 15px;
+  overflow: hidden;
+}
+.iconWindows {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+}
+.logoLogin {
+  margin: 15px 0 0 50%;
+  position: absolute;
+  left: -72px;
+  width: 200px;
+  user-select: none;
+}
+.fontColor {
+  background-image: -webkit-linear-gradient(right, #ff3366, #ff9966);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+.smartIcon {
+  position: absolute;
+  width: 100px;
+  top: 205px;
+  margin-left: 50%;
+  left: -50px;
+  user-select: none;
+}
+.none {
+  display: none;
+}
+.szBtn{
+  z-index: 1000;
+  font-size: 24px;
+  top: 60px;
+  position: absolute;
+  right: 20px;
+  color: rgb(255, 255, 255);
+  -webkit-app-region: no-drag !important;
+  cursor: pointer;
+}
+.modalBox{
+  :global{
+    .ant-form-item{
+      margin-bottom: 0!important;
+    }
+    .ant-modal-content{
+      margin: 20px;
+    }
+  }
+}
+
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  opacity: 0;
+  height: 470px;
+  width: 320px;
+  position: absolute;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 21, 41, 0.5);
+  top:85px;
+  left:320px;
+  background: linear-gradient(#0099ff, #0066ff);
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+  animation-duration: 500ms;
+}
